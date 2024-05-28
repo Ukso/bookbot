@@ -17,12 +17,11 @@ def count_letters(text):
     for element in lowered_text:
         if element.isalpha():
             if element not in letters_dict:
-              print(element)
-              print("false")
               letters_dict[element] = 1
-            calculator = letters_dict[element]
-            calculator= calculator + 1
-            letters_dict[element] = calculator
+            else:
+                calculator = letters_dict[element]
+                calculator= calculator + 1
+                letters_dict[element] = calculator
     return letters_dict
 
 main()
